@@ -2,6 +2,7 @@
 
 {% block content %}
 <form action="" method="post" novalidate>
+  {{ form.hidden_tad() }}
   <p>
     {{ form.username.label }} <br>
     {{ form.username(size=33)  }}
@@ -10,6 +11,10 @@
     {{ form.password.label }} <br>
     {{ form.password(size=33)  }}
   </p>
+  <p>{{ form.remember_me() }} {{ form.remeber_me.label }} </p>
+  <p>{{ form.subnit() }}</p>
+
+
 
 </form>
 {% endblock %}
