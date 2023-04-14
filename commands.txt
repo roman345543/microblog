@@ -1,0 +1,7 @@
+pip install(package name) - установил пакеит в проекте
+pip list - список пакетов в проекте
+flask run - запуск среды , проекта
+flask db init - инициализация базы данных
+flask db migrate  -m (сообщение о внесенных изменениях)
+flask upgrade / downgrade - обновить базу данных / откатить базу данных до предущей версии
+venv\Scripts\activate - запуск вертуальной среды
