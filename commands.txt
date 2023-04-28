@@ -3,5 +3,20 @@ pip list - список пакетов в проекте
 flask run - запуск среды , проекта
 flask db init - инициализация базы данных
 flask db migrate  -m (сообщение о внесенных изменениях)
-flask upgrade / downgrade - обновить базу данных / откатить базу данных до предущей версии
+flask db upgrade / downgrade - обновить базу данных / откатить базу данных до предущей версии
 venv\Scripts\activate - запуск вертуальной среды
+
+ from app import db
+>>> from app.models import User, Post
+>>> user =  User(username = 'roman', email='romankonakov@gmail.com')- создание нового пользователя
+>>> user
+<user roman>
+db.session.add(user)- добавить новое поле в базу данных
+>>> db.session.commit() - сохранить изменения в базе данных
+user1 = User.query.all() - получение всех пользователей из базы данных
+user1
+[<user roman>]
+user = User.query.get(здесь id) - получение одного конкретного пользователя из базы данных
+post = Post(body =' сегодня хорошая погода', author = user)
+>>> db.session.add(post)
+>>> db.session.commit()
