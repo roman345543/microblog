@@ -2,7 +2,7 @@
 
 {% block content %}
 <form action="" method="post" novalidate>
-  {{ form.hidden_tad() }}
+  {{ form.hidden_tag() }}
   <p>
     {{ form.username.label }} <br>
     {{ form.username(size=33)  }}
@@ -17,8 +17,8 @@
     <span style="color:red;">[{{ error }}]</span>
     {% endfor %}
   </p>
-  <p>{{ form.remember_me() }} {{ form.remeber_me.label }} </p>
-  <p>{{ form.subnit() }}</p>
+  <p>{{ form.remember_me() }} {{ form.remember_me.label }} </p>
+  <p>{{ form.submit() }}</p>
 
 
 

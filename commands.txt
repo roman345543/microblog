@@ -5,6 +5,8 @@ flask db init - инициализация базы данных
 flask db migrate  -m (сообщение о внесенных изменениях)
 flask db upgrade / downgrade - обновить базу данных / откатить базу данных до предущей версии
 venv\Scripts\activate - запуск вертуальной среды
+flask shell - облочка приложение
+
 
  from app import db
 >>> from app.models import User, Post
